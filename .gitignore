@@ -1,0 +1,23 @@
+# Variables de entorno
+.env
+
+# Credenciales de Google
+credentials.json
+
+# Entornos virtuales
+.venv/
+venv/
+
+# Caché de Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Archivos de Repomix
+repomix-output.*
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
