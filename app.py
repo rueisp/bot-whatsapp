@@ -2,7 +2,7 @@ import os
 from flask import Flask, request, jsonify
 from dotenv import load_dotenv
 # Importamos la función de sheets
-from sheets_service import obtener_respuesta_sheets
+from services.sheets_service import obtener_respuesta_sheets
 from whatsapp_service import enviar_mensaje_wa
 
 load_dotenv()
