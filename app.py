@@ -3,16 +3,11 @@ from flask import Flask, request, jsonify
 from dotenv import load_dotenv
 # Importamos la función de sheets
 from services.sheets_service import obtener_respuesta_sheets
-from whatsapp_service import enviar_mensaje_wa
+from services.whatsapp_service import enviar_mensaje_wa
 
-load_dotenv()
+from config import VERIFY_TOKEN
 
 app = Flask(__name__)
-
-# Configuración
-TOKEN = os.getenv("WA_TOKEN")
-PHONE_ID = os.getenv("PH_NUMBER_ID")
-VERIFY_TOKEN = os.getenv("VERIFY_TOKEN")
 
 @app.route('/webhook', methods=['GET'])
 def verificar_webhook():
